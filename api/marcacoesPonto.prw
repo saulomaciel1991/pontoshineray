@@ -646,7 +646,7 @@ Static Function GetFeriados(cDataIni, cDataFin, cFilFunc, cMatricula)
 			cJornadaPrevista := aJornada[1]
 			cTurno := aJornada[2]
 			cSqTurno := aJornada[3]
-			Aadd(aFeriados, {ConvertData(cAno+cMesDia),"","",ALLTRIM(DiaSemana(STOD(TSP3->DATA))),"","","",cTurno,cSqTurno,"",ALLTRIM(TSP3->DESC),"","",.F.,U_ConvertHora(0),cJornadaPrevista})
+			Aadd(aFeriados, {ConvertData(cAno+cMesDia),"","",ALLTRIM(DiaSemana(STOD(cAno+cMesDia))),"","","",cTurno,cSqTurno,"",ALLTRIM(TSP3->DESC),"","",.F.,U_ConvertHora(0),cJornadaPrevista})
 		Else
 			aJornada := GetJornada(cFilFunc, cMatricula, TSP3->DATA)
 			cJornadaPrevista := aJornada[1]
